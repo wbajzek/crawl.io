@@ -46,11 +46,11 @@ It only crawls one level deep for now. In our situation, automatically crawling
 all of them would cause infinite loops and I haven't thought about solving that
 yet.
 
-The point of all this is that it uses [IO](http://iolanguage.org) and it uses
+The point of all this is that it uses [io](http://iolanguage.org) and it uses
 futures so that those links will be pulled in asyncronously and will not block
 until they are actually read. All the script does is reJSONize it and print it,
 which means it probably starts blocking fairly quickly, but in a more real
 world type of scenario, it means that other processing code could proceed
 before the embedded documents have been retrieved.
 
-But really, I just wanted to use IO for something.
+But really, I just wanted to use io for something.

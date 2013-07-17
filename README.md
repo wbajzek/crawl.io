@@ -47,7 +47,7 @@ all of them would cause infinite loops and I haven't thought about solving that
 yet.
 
 The point of all this is that it uses [io](http://iolanguage.org) and it uses
-futures so that those links will be pulled in asyncronously and will not block
+futures so that those links will be pulled in asynchronously and will not block
 until they are actually read. All the script does is reJSONize it and print it,
 which means it probably starts blocking fairly quickly, but in a more real
 world type of scenario, it means that other processing code could proceed

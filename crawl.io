@@ -10,9 +10,9 @@ fetch := method(
       // add a method to the record object which is populated with the
       // content fetched from the link.
       record addSlot(slot,
-        // use futureSend() so fetch happens asynchronously and only
-        // blocks if it's not been received by the time it's accessed
-        URL with(record links getSlot(slot)) futureSend(fetchSlot(slot)))))
+        // use @ so fetch happens asynchronously and only blocks if 
+        // it's not been received by the time it's accessed
+        URL with(record links getSlot(slot)) @fetchSlot(slot))))
 
   doc asJson println
 )
